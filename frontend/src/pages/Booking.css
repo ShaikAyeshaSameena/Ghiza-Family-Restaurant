@@ -1,0 +1,128 @@
+/* Booking Page Styling */
+.booking-page {
+  padding: 120px 20px 50px;
+  max-width: 600px;
+  margin: auto;
+  font-family: "Cairo", "Amiri", serif;
+  text-align: center;
+  color: #F1EADA;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.booking-title {
+  font-size: 2.5rem;
+  color: #F1EADA;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(241, 234, 218, 0.7);
+}
+
+/* Booking Form */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #3D1F12;
+  padding: 35px;
+  border-radius: 15px;
+  border: 1px solid #F1EADA;
+  box-shadow: 0 0 20px rgba(241, 234, 218, 0.3);
+  transition: 0.3s ease;
+}
+
+.booking-form:hover {
+  box-shadow: 0 0 28px rgba(241, 234, 218, 0.5);
+}
+
+.booking-form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #F1EADA;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #F1EADA;
+  outline: none;
+  font-size: 1rem;
+  background: #3D1F12;
+  color: #F1EADA;
+  transition: all 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  border-color: #F1EADA;
+  box-shadow: 0 0 12px rgba(241, 234, 218, 0.8);
+}
+
+/* Form Row */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Book Button */
+.btn-book {
+  padding: 14px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #F1EADA;
+  color: #3D1F12;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(241, 234, 218, 0.4);
+}
+
+.btn-book:hover {
+  background: #fff;
+  color: #3D1F12;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(241, 234, 218, 0.9);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.booking-form input,
+.booking-form select {
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #F1EADA;
+  outline: none;
+  font-size: 1rem;
+  background: #3D1F12 !important;   /* Force dark brown */
+  color: #F1EADA !important;        /* Keep text cream */
+  transition: all 0.3s ease;
+}
+
+/* Prevent Chrome autofill from forcing white/yellow */
+.booking-form input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #3D1F12 inset !important;
+  -webkit-text-fill-color: #F1EADA !important;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  border-color: #F1EADA;
+  box-shadow: 0 0 12px rgba(241, 234, 218, 0.8);
+  background: #3D1F12; /* Stay dark even on focus */
+  color: #F1EADA;
+}

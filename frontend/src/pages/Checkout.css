@@ -1,0 +1,137 @@
+/* Overall Page */
+.checkout-page {
+  padding: 50px 20px;
+  background: #3D1F12;
+  min-height: 100vh;
+  font-family: 'Cairo', 'Amiri', serif;
+  display: flex;
+  flex-direction: column;   /* Stack title and form vertically */
+  align-items: center;      /* Center horizontally */
+}
+
+/* Title at top center */
+.checkout-title {
+  font-size: 2.2rem;
+  color: #F1EADA;
+  margin-bottom: 40px;      /* Space between title and form */
+  text-align: center;
+  text-shadow: 0px 0px 8px #F1EADA;
+}
+
+/* Form container */
+.checkout-form {
+  background: #F1EADA;
+  color: #3D1F12;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px;          /* Wider horizontally */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;                /* Space between fields */
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.4);
+}
+
+/* Each input field in a box */
+.field-box {
+  display: flex;
+  flex-direction: column;
+  background: #FFF8E7;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 2px solid #3D1F12;
+  transition: all 0.3s ease;
+}
+
+.field-box:hover {
+  border-color: #5a2c20;
+  box-shadow: 0 0 10px #5a2c20;
+}
+
+/* Inputs inside box */
+.field-box input,
+.field-box textarea {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: 'Cairo', sans-serif;
+  font-size: 1rem;
+  color: #3D1F12;
+  outline: none;
+  padding: 5px 0;
+}
+
+.field-box textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+/* Labels inside each box */
+.field-box label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Submit Button */
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #3D1F12;
+  color: #F1EADA;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.checkout-btn:hover {
+  background: #5a2c20;
+  box-shadow: 0 0 15px #F1EADA;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .checkout-form {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+
+  .checkout-title {
+    font-size: 1.8rem;
+  }
+
+  .checkout-btn {
+    font-size: 1.1rem;
+  }
+}
+/* Force consistent background */
+.field-box input:-webkit-autofill,
+.field-box textarea:-webkit-autofill {
+  background-color: #FFF8E7 !important;
+  -webkit-text-fill-color: #3D1F12 !important;
+  box-shadow: inset 0 0 0px #FFF8E7 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.field-box input:focus,
+.field-box textarea:focus {
+  background-color: #FFF8E7;
+  color: #3D1F12;
+}
+
+.field-box {
+  padding: 10px 15px;   /* slightly smaller padding for compactness */
+}
+
+.field-box textarea {
+  min-height: 60px;     /* reduce vertical height of textarea */
+}
+
+.checkout-btn {
+  padding: 12px;        /* slightly smaller for compact look */
+  font-size: 1.1rem;
+}

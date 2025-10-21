@@ -1,0 +1,12 @@
+const mongoose = require("mongoose");
+
+const menuSchema = new mongoose.Schema({
+  name: { type: String, required: true },      // Item name
+  description: { type: String },               // Optional description
+  price: { type: Number, required: true },     // Price
+  category: { type: String, required: true },  // e.g. Starters, Main Course
+  image: { type: String },                     // Image URL (optional)
+  available: { type: Boolean, default: true }  // Availability
+}, { timestamps: true });
+
+module.exports = mongoose.model("Menu", menuSchema);

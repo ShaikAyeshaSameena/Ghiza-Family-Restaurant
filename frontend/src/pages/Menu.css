@@ -1,0 +1,424 @@
+body {
+  font-family: 'Cairo', 'Amiri', serif; /* Arabic-English style */
+}
+
+.menu-page {
+  padding: 100px 20px 50px;
+  background: #3D1712;
+  min-height: 100vh;
+  color: #F1EADA;
+}
+
+.menu-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #F1EADA;
+  text-align: center;
+  font-family: 'Amiri', serif;
+}
+
+/* Filter Bar */
+.filter-bar {
+  position: sticky;
+  top: 70px;
+  background: #0f0f0f;
+  padding: 10px 0;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  justify-content: center;
+  z-index: 999;
+  border-bottom: 2px solid #222;
+}
+
+.filter-bar button {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  background: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: 'Cairo', sans-serif;
+}
+
+.filter-bar button.active,
+.filter-bar button:hover {
+  background: #facc15;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Search */
+.menu-search {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.menu-search input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  width: 260px;
+  max-width: 90%;
+  outline: none;
+}
+
+/* Category section */
+.menu-category {
+  margin-bottom: 70px; /* space between categories */
+}
+
+.category-title {
+  font-size: 2rem;
+  margin: 30px 0 20px;
+  text-align: left;
+  color: #F1EADA;
+  border-bottom: 2px solid #F1EADA;
+  padding-bottom: 5px;
+  font-family: 'Amiri', serif;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.menu-card {
+  background: #F1EADA;
+  border-radius: 15px;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.4); /* subtle 3D effect */
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.menu-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.menu-info {
+  margin-top: 10px;
+}
+
+.menu-info h3 {
+  font-size: 1.3rem;
+  margin: 8px 0;
+  font-family: 'Cairo', sans-serif;
+  color: #3D1F12;   /* dish name text color */
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: #3D1712;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-weight: bold;
+  color: #3D1712;
+  margin-bottom: 10px;
+}
+
+.add-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #F1EADA;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* 3D button */
+}
+
+.add-btn:hover {
+  background: #783e37;
+}
+
+/* ✅ Better spacing for plus/minus */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 25px;  /* increased distance */
+  margin-top: 8px;
+}
+
+.quantity-controls button {
+  background: #facc15;
+  color: #000;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.2s;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* 3D */
+}
+
+.quantity-controls button:hover {
+  background: #eab308;
+}
+
+.quantity-controls span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #3D1712; 
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.6); /* 3D depth */
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #F1EADA;
+}
+
+/* ✅ Size option row (text left, button right) */
+.size-btn {
+  display: flex;
+  justify-content: space-between; /* text left, button right */
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background: #F1EADA;
+  color: #3D1712;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4); /* 3D */
+}
+
+.size-btn span {
+  flex: 1;
+  text-align: left;
+}
+
+.size-btn .add-btn {
+  background: #facc15;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.size-btn .add-btn:hover {
+  background: #eab308;
+}
+
+.close-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #F1EADA;
+  color: #3D1712;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4); /* 3D */
+}
+/* Size option row */
+.size-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F1EADA;
+  color: #3D1712;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 8px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* 3D effect */
+  font-family: 'Cairo', sans-serif;
+}
+
+/* Text part of the option */
+.size-option span {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Add button */
+.size-option .add-btn {
+  background: #facc15;
+  color: #000;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.size-option .add-btn:hover {
+  background: #eab308;
+}
+
+/* Quantity controls inside modal */
+.modal .quantity-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.modal .quantity-controls button {
+  background: #facc15;
+  color: #000;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+/* Choose Size button under each dish card */
+.add-btn, .choose-size-btn {
+  background: #3D1F12;   /* Change here for color */
+  color: #F1EADA;
+  font-weight: bold;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-btn:hover, .choose-size-btn:hover {
+  background: #eab308;
+}
+/* Size option rows */
+.size-option {
+  display: flex;
+  justify-content: space-between; /* price on left, button on right */
+  align-items: center;
+  background: #2a1210;
+  color: #F1EADA;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3); /* 3D effect */
+}
+
+.size-option span {
+  color: #3D1712;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.size-option .add-btn {
+  background: #facc15;
+  color: #000;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.size-option .add-btn:hover {
+  background: #eab308;
+}
+
+/* Quantity controls (below options) */
+.modal-quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* spacing between - 1 + */
+  margin-top: 15px;
+}
+
+.modal-quantity button {
+  background: #facc15;
+  color: #000;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-quantity button:hover {
+  background: #eab308;
+}
+
+.modal-quantity span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+/* Modal size option layout */
+.size-option {
+  display: flex;
+  justify-content: space-between;  /* push label left, buttons right */
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  background: #F1EADA;   /* option box color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* 3D effect */
+}
+
+/* size text color */
+.size-option .size-label {
+  color: #3D1712;
+  font-weight: bold;
+}
+
+/* quantity controls aligned properly */
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;  /* space between - number + */
+}
+
+.qty-controls button {
+  background: #facc15;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.qty-controls span {
+  min-width: 24px;
+  text-align: center;
+  font-weight: bold;
+  color: #3D1712;
+}

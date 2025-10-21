@@ -1,0 +1,22 @@
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #3D1F12;
+  color: #F1EADA;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px; /* keeps gap from title */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.back-btn:hover {
+  background: #5a2c20;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #F1EADA;
+}
