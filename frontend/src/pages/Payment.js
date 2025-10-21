@@ -84,7 +84,7 @@ const Payment = () => {
         <div className="upi-section">
           <h3>Scan & Pay</h3>
           <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=ghiza@upi"
+            src="https://i.ibb.co/TqcKcGf9/IMG-20251021-174958.png"
             alt="UPI QR Code"
             className="upi-qr"
           />
